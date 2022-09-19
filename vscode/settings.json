@@ -1,0 +1,51 @@
+// ユーザ用VSCode設定ファイル
+//
+// Windows: $HOME/AppData/Roaming/Code/User/settings.json
+{
+  "workbench.colorTheme": "Default Light+",
+
+  "git.ignoreMissingGitWarning": true,
+
+  "files.trimTrailingWhitespace": true,
+
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.renderWhitespace": "all",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": false,
+
+  "prettier.enable": true,
+  "prettier.enableDebugLogs": true,
+
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+
+  "[json]": {
+    "editor.formatOnSave": true
+  },
+
+  "[jsonc]": {
+    "editor.formatOnSave": true
+  },
+
+  "[python]": {
+    "editor.formatOnSave": true,
+    // python用formatter "black"プラグイン ※ python用のprettierは存在しない
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+
+  // runonsaveプラグイン
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "\\.sh$",
+        "cmd": "prettier --write ${file}"
+      }
+    ]
+  }
+}
