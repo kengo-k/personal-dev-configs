@@ -52,3 +52,13 @@ bindkey '^h' peco-history-selection
 if [ -d ~/.asdf ]; then
   source ~/.asdf/asdf.sh
 fi
+
+# OS別設定
+case ${OSTYPE} in
+  darwin*)
+    #mac
+    ;;
+  linux*)
+    alias ls='ls --color=auto'
+    ;;
+esac
