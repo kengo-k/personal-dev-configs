@@ -29,23 +29,36 @@ PROMPT='
 
 # setup peco-ghq
 peco-src () {
-    local repo=$(ghq list | peco --query "$LBUFFER")
-    if [ -n "$repo" ]; then
-        repo=$(ghq list --full-path --exact $repo)
-        BUFFER="cd ${repo}"
-        zle accept-line
-    fi
-    zle clear-screen
+  local repo=$(ghq list | peco --query "$LBUFFER")
+  if [ -n "$repo" ]; then
+    repo=$(ghq list --full-path --exact $repo)
+    BUFFER="cd ${repo}"
+    zle accept-line
+  fi
+  zle clear-screen
 }
 zle -N peco-src
 bindkey '^g' peco-src
 
 # setup peco-history
 peco-history-selection() {
-    BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
-    CURSOR=$#BUFFER
-    zle reset-prompt
+  BUFFER=`history -n 1 | tac  | awk '!a[$0]++' | peco`
+  CURSOR=$#BUFFER
+  zle reset-prompt
 }
 zle -N peco-history-selection
 bindkey '^h' peco-history-selection
 
+if [ -d ~/.asdf ]; then
+  source ~/.asdf/asdf.sh
+fi
+
+# OS別設定
+case ${OSTYPE} in
+  darwin*)
+    #mac
+    ;;
+  linux*)
+    alias ls='ls --color=auto'
+    ;;
+esac
