@@ -53,6 +53,15 @@ if [ -d ~/.asdf ]; then
   source ~/.asdf/asdf.sh
 fi
 
+# ユーティリティ
+docker-login() {
+  # TODO インストールスクリプトを用意すること
+  # ホームディレクトリ下にdocker-user.jsonが配置されている前提
+  user=$(cat docker-user.json | jq -r .user)
+  password=$(cat docker-user.json | jq -r .password)
+  echo $password | docker login --username $user --password-stdin
+}
+
 # OS別設定
 case ${OSTYPE} in
   darwin*)
