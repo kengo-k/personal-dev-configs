@@ -17,6 +17,7 @@
 // [プログラミング言語別]
 //
 // - ES7+ React/Redux/React-Native snippets: Reactのコードスニペットサポート
+// - Import Cost: jsでimport文の横にサイズを表示してくれる
 // - Black Formatter: Python用のフォーマッター(prettierがpython対応していない)
 
 {
