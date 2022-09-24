@@ -1,14 +1,14 @@
 // ユーザ用VSCode設定ファイル
 //
 // Windows: $HOME/AppData/Roaming/Code/User/settings.json
-// Mac: $HOME/Library/Application Support/Code/User
+// Mac: $HOME/Library/Application Support/Code/User/settings.json
 
 // インストールしたプラグイン
 // [一般]
 // - Material Icon Theme: エクスプローラーのアイコンの見栄えを良くする
 // - Remote - Containers: コンテナ内で直接ファイル編集等の作業をする際に使用する
 // - Prettier - Code formatter: フォーマッター
-//    ※prettier本体は別途でnodeによるグローバルインストール推奨
+//    ※prettier本体は別途でnodeによるグローバルインストール推奨(標準以外の言語サポートを追加で使いたいため)
 //    npm install -g prettier
 //    npm install -g prettier-plugin-sh
 //
