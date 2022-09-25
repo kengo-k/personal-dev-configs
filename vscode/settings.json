@@ -25,10 +25,12 @@
 
 {
   "workbench.colorTheme": "Default Light+",
-
   "git.ignoreMissingGitWarning": true,
-
   "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+
+  // WindowsのデフォルトターミナルをGitBashに設定
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
 
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
@@ -87,26 +89,6 @@
     ]
   },
 
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": [
-        "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
-      ],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
-    },
-    "Ubuntu (WSL)": {
-      "path": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": ["-d", "Ubuntu"]
-    }
-  },
-  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)"
+  // Workspace Sidebar: ワークスペースファイルを格納したディレクトリを指定することでサイドバーにワークスペース一覧を表示できる
+  "workspaceSidebar.folder": "~\\Workspaces"
 }
