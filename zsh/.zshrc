@@ -71,5 +71,13 @@ case ${OSTYPE} in
     ;;
   msys*)
     alias ls='ls --color=auto'
+    # lnでシンボリックリンクを作成可能にする
+    export MSYS=winsymlinks:nativestrict
+    # Git bashにインストールしたzsh上でDELETEを押したときに正常に動作しなかった対応
+    bindkey "^[[3~" delete-char
+    bindkey "^[[1~" beginning-of-line
+    bindkey "^[[4~" end-of-line
+    # SHELL環境変数がbashのままになっていたので対応
+    export SHELL=/usr/bin/zsh
     ;;
 esac
