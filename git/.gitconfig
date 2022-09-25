@@ -1,0 +1,9 @@
+[ghq]
+  root = ~/Projects
+
+[user]
+  name = your_name
+  email = your_email
+
+[core]
+  autocrlf = false
