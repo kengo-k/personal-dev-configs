@@ -37,7 +37,6 @@ CURRENT_DIR=$(
 echo "cd \"$SETTINGS_DIR\""
 cd "$SETTINGS_DIR"
 
-# Windows(Git Bash)の場合はlnしてもシンボリックリンクは作成されずに単にコピーされる
-# 対応するには設定と管理者権限でGit Bashを動かす必要がある模様(面倒なので対応しない)
+# Windows(Git Bash)の場合はlnしても(デフォルトでは)シンボリックリンクは作成されずに単にコピーされる
 echo "ln -s $CURRENT_DIR/settings.json ./$SETTINGS_FILE"
 ln -s $CURRENT_DIR/settings.json ./$SETTINGS_FILE
