@@ -65,9 +65,11 @@ docker-login() {
 # OS別設定
 case ${OSTYPE} in
   darwin*)
-    #mac
     ;;
   linux*)
+    alias ls='ls --color=auto'
+    ;;
+  msys*)
     alias ls='ls --color=auto'
     ;;
 esac
