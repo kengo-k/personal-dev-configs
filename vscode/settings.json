@@ -18,15 +18,19 @@
 //
 // [プログラミング言語別]
 //
-// (JS系)
+// (JS)
 // - ES7+ React/Redux/React-Native snippets: Reactのコードスニペットサポート
 // - Import Cost: jsでimport文の横にサイズを表示してくれる
 //
-// (CSS系)
+// (CSS)
 // - PostCSS Language Support: vscodeで@tailwindなどの記述がエラーになる対応
 // - Tailwind CSS IntelliSense: Tailwindの補完をしてくれる
 //
+// (Python)
 // - Black Formatter: Python用のフォーマッター(prettierがpython対応していないため個別対応)
+//
+// (GraphQL)
+// - GraphQL: Language Feature Support
 
 {
   // Material Icon Themeプラグイン
