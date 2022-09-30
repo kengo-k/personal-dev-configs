@@ -100,5 +100,5 @@
   },
 
   // Workspace Sidebarプラグイン
-  "workspaceSidebar.folder": "~\\Workspaces"
+  "workspaceSidebar.folder": "~/Workspaces"
 }
