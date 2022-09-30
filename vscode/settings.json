@@ -2,11 +2,12 @@
 //
 // Windows: $HOME/AppData/Roaming/Code/User/settings.json
 // Mac: $HOME/Library/Application Support/Code/User/settings.json
+// Linux: $HOME/.config/Code/User/settings.json
 
 // インストールしたプラグイン
 // [一般]
 // - Material Icon Theme: エクスプローラーのアイコンの見栄えを良くする
-// - Remote - Containers: コンテナ内で直接ファイル編集等の作業をする際に使用する
+// - Dev Containers: コンテナ内で直接ファイル編集等の作業をする際に使用する
 // - Prettier - Code formatter: フォーマッター
 //    ※prettier本体は別途でnodeによるグローバルインストール推奨(標準以外の言語サポートを追加で使いたいため)
 //    npm install -g prettier
@@ -27,6 +28,9 @@
 // - Black Formatter: Python用のフォーマッター(prettierがpython対応していない)
 
 {
+  // Material Icon Themeプラグイン
+  "workbench.iconTheme": "material-icon-theme",
+
   "workbench.colorTheme": "Default Light+",
   "git.ignoreMissingGitWarning": true,
   "files.trimTrailingWhitespace": true,
@@ -35,9 +39,11 @@
   // WindowsのデフォルトターミナルをGitBashに設定
   "terminal.integrated.defaultProfile.windows": "Git Bash",
 
+  "editor.fontSize": 22,
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.renderWhitespace": "all",
+  // Prettierプラグイン
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": false,
 
@@ -74,7 +80,7 @@
 
   "[python]": {
     "editor.formatOnSave": true,
-    // python用formatter "black"プラグイン ※ python用のprettierは存在しない
+    // python用formatter "black"プラグイン ※ python用のprettierは存在しないため
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
 
@@ -92,6 +98,6 @@
     ]
   },
 
-  // Workspace Sidebar: ワークスペースファイルを格納したディレクトリを指定することでサイドバーにワークスペース一覧を表示できる
+  // Workspace Sidebarプラグイン: ワークスペースファイルを格納したディレクトリを指定することでサイドバーにワークスペース一覧を表示できる
   "workspaceSidebar.folder": "~\\Workspaces"
 }
