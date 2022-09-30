@@ -14,6 +14,7 @@
 //    npm install -g prettier-plugin-sh
 //
 // - Run on Save: 保存時に任意のコマンドを実行する
+// - Workspace Sidebar: ワークスペースファイルを格納したディレクトリを指定することでサイドバーにワークスペース一覧を表示できる
 //
 // [プログラミング言語別]
 //
@@ -25,7 +26,7 @@
 // - PostCSS Language Support: vscodeで@tailwindなどの記述がエラーになる対応
 // - Tailwind CSS IntelliSense: Tailwindの補完をしてくれる
 //
-// - Black Formatter: Python用のフォーマッター(prettierがpython対応していない)
+// - Black Formatter: Python用のフォーマッター(prettierがpython対応していないため個別対応)
 
 {
   // Material Icon Themeプラグイン
@@ -80,7 +81,7 @@
 
   "[python]": {
     "editor.formatOnSave": true,
-    // python用formatter "black"プラグイン ※ python用のprettierは存在しないため
+    // Black Formatter
     "editor.defaultFormatter": "ms-python.black-formatter"
   },
 
@@ -98,6 +99,6 @@
     ]
   },
 
-  // Workspace Sidebarプラグイン: ワークスペースファイルを格納したディレクトリを指定することでサイドバーにワークスペース一覧を表示できる
+  // Workspace Sidebarプラグイン
   "workspaceSidebar.folder": "~\\Workspaces"
 }
