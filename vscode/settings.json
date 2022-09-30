@@ -8,6 +8,7 @@
 // [一般]
 // - Material Icon Theme: エクスプローラーのアイコンの見栄えを良くする
 // - Dev Containers: コンテナ内で直接ファイル編集等の作業をする際に使用する
+// - ESLint: ES系の構文チェック
 // - Prettier - Code formatter: フォーマッター
 //    ※prettier本体は別途でnodeによるグローバルインストール推奨(標準以外の言語サポートを追加で使いたいため)
 //    npm install -g prettier
@@ -68,7 +69,10 @@
   },
 
   "[typescript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
   },
 
   "[typescriptreact]": {
