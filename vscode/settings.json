@@ -39,6 +39,9 @@
 
   "workbench.colorTheme": "Default Light+",
   "git.ignoreMissingGitWarning": true,
+
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
   "files.eol": "\n",
 
