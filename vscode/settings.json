@@ -56,6 +56,10 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": false,
 
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true
+  },
+
   "prettier.enable": true,
   "prettier.enableDebugLogs": true,
 
