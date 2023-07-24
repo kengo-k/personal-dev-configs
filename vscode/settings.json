@@ -8,112 +8,30 @@
 // [一般]
 // - Material Icon Theme: エクスプローラーのアイコンの見栄えを良くする
 // - Dev Containers: コンテナ内で直接ファイル編集等の作業をする際に使用する
-// - ESLint: ES系の構文チェック
 // - Prettier - Code formatter: フォーマッター
 //    ※prettier本体は別途でnodeによるグローバルインストール推奨(標準以外の言語サポートを追加で使いたいため)
 //    npm install -g prettier
+//    ex) shを整形したい場合は下記のプラグインをインストールする
 //    npm install -g prettier-plugin-sh
-//
 // - Run on Save: 保存時に任意のコマンドを実行する
-// - Workspace Sidebar: ワークスペースファイルを格納したディレクトリを指定することでサイドバーにワークスペース一覧を表示できる
-//
-// [プログラミング言語別]
-//
-// (JS)
-// - ES7+ React/Redux/React-Native snippets: Reactのコードスニペットサポート
-// - Import Cost: jsでimport文の横にサイズを表示してくれる
-//
-// (CSS)
-// - PostCSS Language Support: vscodeで@tailwindなどの記述がエラーになる対応
-// - Tailwind CSS IntelliSense: Tailwindの補完をしてくれる
-//
-// (Python)
-// - Black Formatter: Python用のフォーマッター(prettierがpython対応していないため個別対応)
-//
-// (GraphQL)
-// - GraphQL: Language Feature Support
+// - Workspace Sidebar: サイドバーにワークスペース一覧を表示できる
 
 {
-  // Material Icon Themeプラグイン
-  "workbench.iconTheme": "material-icon-theme",
+    // Workspace Sidebarプラグイン
+    "workspaceSidebar.folder": "~/Workspaces",
 
-  "workbench.colorTheme": "Default Light+",
-  "git.ignoreMissingGitWarning": true,
+    // Material Icon Themeプラグイン
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Default Light+",
 
-  "files.insertFinalNewline": true,
-  "files.trimFinalNewlines": true,
-  "files.trimTrailingWhitespace": true,
-  "files.eol": "\n",
-
-  // WindowsのデフォルトターミナルをGitBashに設定
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-
-  "editor.fontSize": 22,
-  "editor.tabSize": 2,
-  "editor.insertSpaces": true,
-  "editor.renderWhitespace": "all",
-  // Prettierプラグイン
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": false,
-
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": true
-  },
-
-  "prettier.enable": true,
-  "prettier.enableDebugLogs": true,
-
-  "[html]": {
-    "editor.formatOnSave": true
-  },
-
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-
-  "[javascriptreact]": {
-    "editor.formatOnSave": true
-  },
-
-  "[typescript]": {
-    "editor.formatOnSave": true,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
-    }
-  },
-
-  "[typescriptreact]": {
-    "editor.formatOnSave": true
-  },
-
-  "[json]": {
-    "editor.formatOnSave": true
-  },
-
-  "[jsonc]": {
-    "editor.formatOnSave": true
-  },
-
-  "[python]": {
-    "editor.formatOnSave": true,
-    // Black Formatter
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-
-  // runonsaveプラグイン
-  "emeraldwalk.runonsave": {
-    "commands": [
-      {
-        "match": "\\.sh$",
-        "cmd": "prettier --write ${file}"
-      },
-      {
-        "match": "\\.go$",
-        "cmd": "go fmt ${file}"
-      }
-    ]
-  },
-
-  // Workspace Sidebarプラグイン
-  "workspaceSidebar.folder": "~/Workspaces"
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "rust": true,
+        "html": true
+    },
+    "editor.inlineSuggest.enabled": true,
+    "svg.preview.mode": "svg"
 }
